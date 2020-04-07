@@ -105,7 +105,7 @@ void QSPI_FLASH_Init(void)
 	QSPIHandle.Init.DualFlash = QSPI_DUALFLASH_ENABLE;
 	HAL_QSPI_Init(&QSPIHandle);
 	/*初始化QSPI接口*/
-//	BSP_QSPI_Init();
+	BSP_QSPI_Init();
 }
 
 
