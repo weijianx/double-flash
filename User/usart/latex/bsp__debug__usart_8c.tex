@@ -1,0 +1,72 @@
+\hypertarget{bsp__debug__usart_8c}{}\doxysection{bsp\+\_\+debug\+\_\+usart.\+c File Reference}
+\label{bsp__debug__usart_8c}\index{bsp\_debug\_usart.c@{bsp\_debug\_usart.c}}
+
+
+使用串口1，重定向c库printf函数到usart端口，中断接收模式  
+
+
+{\ttfamily \#include \char`\"{}./usart/bsp\+\_\+debug\+\_\+usart.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsp__debug__usart_8c_aac3292d3bbf76439cb3fcf450d6c49a2}{D\+E\+B\+U\+G\+\_\+\+U\+S\+A\+R\+T\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em D\+E\+B\+U\+G\+\_\+\+U\+S\+A\+RT G\+P\+IO 配置,工作模式配置。115200 8-\/N-\/1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{bsp__debug__usart_8c_a78e47eb176afafebb243cd3eb32b7141}\label{bsp__debug__usart_8c_a78e47eb176afafebb243cd3eb32b7141}} 
+void {\bfseries Usart\+\_\+\+Send\+String} (U\+S\+A\+R\+T\+\_\+\+Type\+Def $\ast$p\+U\+S\+A\+R\+Tx, uint8\+\_\+t $\ast$str)
+\item 
+\mbox{\Hypertarget{bsp__debug__usart_8c_abac7707b6be5733e890091048fcb99a2}\label{bsp__debug__usart_8c_abac7707b6be5733e890091048fcb99a2}} 
+int \mbox{\hyperlink{bsp__debug__usart_8c_abac7707b6be5733e890091048fcb99a2}{fputc}} (int ch, F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em 重定向c库函数printf到串口\+D\+E\+B\+U\+G\+\_\+\+U\+S\+A\+R\+T，重定向后可使用printf函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{bsp__debug__usart_8c_a2c4fad5f95f4c5242c3ea25d791df6e5}\label{bsp__debug__usart_8c_a2c4fad5f95f4c5242c3ea25d791df6e5}} 
+int \mbox{\hyperlink{bsp__debug__usart_8c_a2c4fad5f95f4c5242c3ea25d791df6e5}{fgetc}} (F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em 重定向c库函数scanf到串口\+D\+E\+B\+U\+G\+\_\+\+U\+S\+A\+R\+T，重写向后可使用scanf、getchar等函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{bsp__debug__usart_8c_a2d3238638f25fd8e78b21dc8e5efd348}\label{bsp__debug__usart_8c_a2d3238638f25fd8e78b21dc8e5efd348}} 
+U\+A\+R\+T\+\_\+\+Handle\+Type\+Def {\bfseries Uart\+Handle}
+\item 
+\mbox{\Hypertarget{bsp__debug__usart_8c_a29c2c56bc4ab249a2d6190eb74e971c4}\label{bsp__debug__usart_8c_a29c2c56bc4ab249a2d6190eb74e971c4}} 
+uint8\+\_\+t {\bfseries uc\+Temp}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+使用串口1，重定向c库printf函数到usart端口，中断接收模式 
+
+\begin{DoxyAuthor}{Author}
+fire 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2016-\/xx-\/xx 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+实验平台\+:野火 S\+T\+M32 H743 开发板 ~\newline
+ 论坛 \+:\href{http://www.firebbs.cn}{\texttt{ http\+://www.\+firebbs.\+cn}} 淘宝 \+:\href{http://firestm32.taobao.com}{\texttt{ http\+://firestm32.\+taobao.\+com}} 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bsp__debug__usart_8c_aac3292d3bbf76439cb3fcf450d6c49a2}\label{bsp__debug__usart_8c_aac3292d3bbf76439cb3fcf450d6c49a2}} 
+\index{bsp\_debug\_usart.c@{bsp\_debug\_usart.c}!DEBUG\_USART\_Config@{DEBUG\_USART\_Config}}
+\index{DEBUG\_USART\_Config@{DEBUG\_USART\_Config}!bsp\_debug\_usart.c@{bsp\_debug\_usart.c}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_USART\_Config()}{DEBUG\_USART\_Config()}}
+{\footnotesize\ttfamily void D\+E\+B\+U\+G\+\_\+\+U\+S\+A\+R\+T\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+D\+E\+B\+U\+G\+\_\+\+U\+S\+A\+RT G\+P\+IO 配置,工作模式配置。115200 8-\/N-\/1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 无} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 无} & \\
+\hline
+\end{DoxyRetVals}
